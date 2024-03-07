@@ -12,13 +12,16 @@
         <div class="container">
             <nav>
                 <p class="logo"><span>K</span>ingsley.</p>
-                <ul class="links">
+                <ul id="sidemenu" class="links">
                     <li ><a href="#">Home</a></li>
                     <li ><a href="#">About</a></li>
                     <li ><a href="#">Services</a></li>
                     <li ><a href="#">Portfolio</a></li>
                     <li ><a href="#">Contact</a></li>
+                    <i class="fa fa-times" onclick="closemenu()" aria-hidden="true"></i>
                 </ul>
+                <i class="fa fa-bars" onclick="openmenu()" aria-hidden="true"></i>
+                
             </nav>
             <div class="header-text">
                 <p>Frontend <span>React</span> Developer</p>
@@ -95,30 +98,69 @@
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="https://images.unsplash.com/photo-1550367363-ea12860cc124?q=80&h=190&w=350&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="restaurant-image">
+                    <img src="https://i.pinimg.com/originals/48/28/46/482846450ac995ca29d21134824b935f.jpg" alt="restaurant-image">
                     <div class="layer">
                         <h3>Food Ordering Website</h3>
                         <p>This app uses live API from Swiggy to display various restaurants.</p>
-                        <a href=""><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        <span>
+                            <a href="https://new-food-1-app-xi.vercel.app/"><button>Live Website</button></a>
+                            <a href="https://github.com/Kingsley-Onuoha/New-Food-app"><button>Source Code</button></a> 
+                         </span>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="https://w7.pngwing.com/pngs/950/23/png-transparent-netflix-streaming-media-television-show-logo-netflix-television-text-trademark-thumbnail.png" alt="">
+                    <img src="https://strapi.dhiwise.com/uploads/jusplay_movie_streaming_app_flutter_2_3dfd9cbbfc.jpg?w=1920&q=75" alt="">
                     <div class="layer">
                         <h3>Netflix Clone Website</h3>
                         <p>This app uses live API from TMDB to display movie information and also uses GPT API to search for movies.</p>
-                        <a href=""><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        <span>
+                            <a href="https://netflix-gpt-new-roan.vercel.app/"><button>Live Website</button></a>
+                            <a href="https://github.com/Kingsley-Onuoha/NetflixGPT"><button>Source Code</button></a> 
+                         </span>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="https://as1.ftcdn.net/v2/jpg/03/00/38/90/1000_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg" alt="restaurant-image">
-                    <div class="layer">
+                    <img src="https://media.licdn.com/dms/image/C4D12AQE4ajaKXAZJjg/article-cover_image-shrink_720_1280/0/1623235213940?e=1715212800&v=beta&t=pSVRfPqTeAfQ6HFUM0GlopQ8Mh2Pr7IZSzPRFD_22KQ" alt="restaurant-image">
+                    <div class="layer"> 
                         <h3>Youtube Clone Application</h3>
                         <p>This replicates Youtube, using Youtube live API to display movies.</p>
-                        <a href=""><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        <span>
+                           <a href=""><button>Live Website</button></a>
+                           <a href="https://github.com/Kingsley-Onuoha/Youtube-Clone"><button>Source Code</button></a> 
+                        </span>
                     </div>
                 </div>
             </div>
+            <a class="btn" href="">See More</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa fa-paper-plane" aria-hidden="true"></i>onuohakingsley521@gmail.com</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>+234-8160455123</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/kingsley-onuoha-m-eng-619275197/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://github.com/Kingsley-Onuoha"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    </div>
+                    <a href="https://docs.google.com/document/d/1GqfQ1MshgpARBMbH8Ydn2kvykM14cQVF/edit" download class="btn btn2">See My CV</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button class="btn btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © Kingsley.</p>
         </div>
     </div>
     
@@ -139,6 +181,18 @@
             event.currentTarget.classList.add("active-link")
 
             document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px"
         }
     </script>
 </body>
