@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: black;
     color: white;
@@ -24,6 +27,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+nav .fa{
+    display: none;
 }
 nav p span{
     color: #ff004f;
@@ -358,4 +364,8 @@ nav .fas{
         flex-basis: 100%;
     }
 
+}#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
